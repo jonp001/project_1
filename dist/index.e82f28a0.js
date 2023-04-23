@@ -558,15 +558,15 @@ function hmrAccept(bundle, id) {
 
 },{}],"dV6cC":[function(require,module,exports) {
 var _gameJs = require("./game.js");
-var _planeJs = require("./plane.js");
-new (0, _planeJs.Plane)();
+// import {Plane} from "./plane.js";
 window.onload = function() {
     let game;
-    function startGame() {
-        console.log("Game started");
-        game = new (0, _gameJs.Game)();
-        game.start();
-    }
+    // function startGame() {
+    console.log("Game started");
+    game = new (0, _gameJs.Game)();
+    // console.log("game: ", game)
+    game.gameLoop();
+    // }
     function handleKeydown(e) {
         const key = e.key;
         console.log("key: ", key);
@@ -578,17 +578,26 @@ window.onload = function() {
             e.preventDefault();
             switch(key){
                 case "ArrowLeft":
+                    // console.log("hello: ", game.plane)
                     game.plane.directionX = -1;
                     break;
                 case "ArrowRight":
+                    // console.log("hello: ", game.plane)
                     game.plane.directionX = 1;
                     break;
             }
         }
     }
     window.addEventListener("keydown", handleKeydown);
+// const plane= new Plane();
+// const updateGame =() => {
+//     if (key["ArrowLeft"] {
+//         plane.moveL();
+//     } else if(key["ArrowRight"]) {
+//         plane.moveR();
+//     }
 };
 
-},{"./game.js":"9hTyP","./plane.js":"g00R2"}]},["fyTPu","dV6cC"], "dV6cC", "parcelRequirea506")
+},{"./game.js":"9hTyP"}]},["fyTPu","dV6cC"], "dV6cC", "parcelRequirea506")
 
 //# sourceMappingURL=index.e82f28a0.js.map
