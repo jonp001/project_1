@@ -558,7 +558,6 @@ function hmrAccept(bundle, id) {
 
 },{}],"dV6cC":[function(require,module,exports) {
 var _gameJs = require("./game.js");
-// import {Plane} from "./plane.js";
 window.onload = function() {
     let game;
     // function startGame() {
